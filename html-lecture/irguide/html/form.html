@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>irguide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/layout03.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="../js/gnb.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href=""><img src="../images/logo.png" alt="" /></a>
+      </h1>
+      <ul class="gnb">
+        <li>
+          <a href="" class="depth01">제품소개</a>
+          <ul class="depth02">
+            <li>
+              <a href="">열화상 카메라</a>
+            </li>
+            <li>
+              <a href="">산업용 안전펜스</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" class="depth01">머신비전</a>
+        </li>
+        <li>
+          <a href="" class="depth01">회사소개</a>
+          <ul class="depth02">
+            <li>
+              <a href="">회사 연혁</a>
+            </li>
+            <li>
+              <a href="">오시는 길</a>
+            </li>
+            <li>
+              <a href="">채용정보</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" class="depth01">고객지원</a>
+          <ul class="depth02">
+            <li>
+              <a href="">자료실</a>
+            </li>
+            <li>
+              <a href="">적용사례</a>
+            </li>
+            <li>
+              <a href="">공지사항</a>
+            </li>
+          </ul>
+        </li>
+        <li class="aaa">
+          <a href="" class="depth01">고객문의</a>
+          <ul class="depth02">
+            <li>
+              <a href="">문의하기</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <!-- header end -->
+
+    <div class="join">
+      <div class="container">
+        <h2>회원가입</h2>
+        <div class="basic-info-box">
+          <form action="join-confirm.html">
+            <div class="table-box">
+              <h3>기본정보</h3>
+
+              <table class="form-table">
+                <colgroup>
+                  <col style="width: 150px" />
+                  <col />
+                </colgroup>
+                <!-- thead표의 최상단 영역 -->
+                <!-- <thead></thead> -->
+                <!-- 표의 몸통 영역tbody 필수 -->
+                <tbody>
+                  <tr>
+                    <!-- 제목이 들어가는건 th 내용은 td -->
+                    <th>
+                      <label for="user-id">아이디</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        name="userId"
+                        placeholder="아이디를 입력해주세요"
+                        id="user-id"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="user-pw">비밀번호</label>
+                    </th>
+                    <td>
+                      <input
+                        type="password"
+                        name="userPw"
+                        placeholder="비밀번호를 입력해주세요"
+                        id="user-pw"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="user-pw-confirm">비밀번호 확인</label>
+                    </th>
+                    <td>
+                      <input
+                        type="password"
+                        name="userPw"
+                        placeholder="다시 입력해주세요"
+                        id="user-pw-confirm"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="user-name">이름</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        name="userName"
+                        placeholder="이름을 입력해주세요"
+                        id="user-name"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="postcode">주소</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        name="postCode"
+                        placeholder="우편번호"
+                        id="postCode"
+                        readonly
+                      />
+                      <button type="button" id="btn-post" class="btn">
+                        우편번호
+                      </button>
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="roadAddress"
+                          placeholder="도로명 주소"
+                          id="roadAddress"
+                          readonly
+                        />
+                      </div>
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="jibunAddress"
+                          placeholder="지번"
+                          id="jibunAddress"
+                          readonly
+                        />
+                      </div>
+                      <div class="input-box">
+                        <input
+                          type="text"
+                          name="extraAddress"
+                          placeholder="건물이름"
+                          id="extraAddress"
+                          readonly
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 제목이 들어가는건 th 내용은 td -->
+                    <th>
+                      <label for="user-hp">휴대전화</label>
+                    </th>
+                    <td>
+                      <select name="userHp" id="">
+                        <option value="010" selected>010</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select>
+                      <input class="short" type="text" name="userHpMiddle" />
+                      <input class="short" type="text" name="userHpLast" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 제목이 들어가는건 th 내용은 td -->
+                    <th>
+                      <label for="user-email">이메일</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        name="userEmail"
+                        placeholder="이메일을 입력해주세요"
+                        id="user-email"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+                <!-- <tfoot></tfoot> -->
+              </table>
+              <input type="checkbox" name="agree" id="agree" value="agreeOk" />
+              동의
+              <!-- radio 사용시 name 같음= 단일선택 다름=중복선택 -->
+              <!-- <input type="radio" name="gender" value="male" />남자
+              <input type="radio" name="gender" value="female" />여자 -->
+            </div>
+            <div class="table-box">
+              <h3>추가정보</h3>
+              <table class="form-table">
+                <colgroup>
+                  <col style="width: 150px" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <!-- 제목이 들어가는건 th 내용은 td -->
+                    <th>
+                      <label for="user-gender">성별</label>
+                    </th>
+                    <td>
+                      <input type="radio" name="gender" value="male" />남자
+                      <input type="radio" name="gender" value="female" />여자
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 제목이 들어가는건 th 내용은 td -->
+                    <th>
+                      <label for="user-birth">생년월일</label>
+                    </th>
+                    <td>
+                      <!-- prettier-ignore -->
+                      <input class="short" type="text" name="year" />년
+                      <input class="short" type="text" name="year" />월
+                      <input class="short" type="text" name="year" />일
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-box">
+              <h3>전체동의</h3>
+              <table class="form-table">
+                <colgroup>
+                  <col style="width: 150px" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <td>
+                      이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신 (선택)에
+                      모두 동의합니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <td>[필수] 이용약관 동의</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <td>[필수] 개인정보 수집 및 이용 동의</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <td>[선택] SMS (문자, 카카오톡 등) 수신을 동의하십니까?</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <td>[선택] 이메일 수신을 동의하십니까?</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-box">
+              <button class="btn" id="btn-join">회원가입</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <button class="btn-top">TOP</button>
+  </body>
+  <script>
+    // querySelector 클래스는(.클래스) id는 (#id)
+    const btnPost = document.querySelector("#btn-post");
+    btnPost.addEventListener("click", function () {
+      searchPostCode();
+      //console.log("btn-post click"); 클릭시 콘솔창에서 작동로그확인
+    });
+    // 변수 지정시 사용하는것 var , let ,const var=옛날
+    // 함수 선언
+    function searchPostCode() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          console.log(data);
+          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+          // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+          var roadAddr = data.roadAddress; // 도로명 주소 변수
+          var extraRoadAddr = ""; // 참고 항목 변수
+
+          // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+          // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+          if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+            extraRoadAddr += data.bname;
+          }
+          // 건물명이 있고, 공동주택일 경우 추가한다.
+          if (data.buildingName !== "" && data.apartment === "Y") {
+            extraRoadAddr +=
+              extraRoadAddr !== ""
+                ? ", " + data.buildingName
+                : data.buildingName;
+          }
+          // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+          if (extraRoadAddr !== "") {
+            extraRoadAddr = " (" + extraRoadAddr + ")";
+          }
+
+          // 우편번호와 주소 정보를 해당 필드에 넣는다.
+          document.getElementById("postCode").value = data.zonecode;
+          document.getElementById("roadAddress").value = roadAddr;
+          document.getElementById("jibunAddress").value = data.jibunAddress;
+
+          // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+          if (roadAddr !== "") {
+            document.getElementById("extraAddress").value = extraRoadAddr;
+          } else {
+            document.getElementById("extraAddress").value = "";
+          }
+        },
+      }).open();
+    }
+    //validation
+    const btnJoin = document.querySelector("#btn-join");
+    const joinForm = document.querySelector("#join-form");
+    const userId = document.querySelector("#user-id");
+    const userPw = document.querySelector("#user-pw");
+    const userName = document.querySelector("#user-name");
+    const postCode = document.querySelector("#postCode");
+    const agree = document.querySelector("#agree");
+    const userEmail = document.querySelector("#user-email");
+
+    btnJoin.addEventListener("click", function (e) {
+      console.log(userId);
+      console.log(agree.checked, "====", agree.value);
+      e.preventDefault();
+      if (userId.value.trim() === "") {
+        alert("아이디를 입력해주세요");
+        userId.focus();
+        userId.value = "";
+      } else if (userPw.value.trim() === "") {
+        alert("비밀번호를 입력해주세요");
+        userPw.focus();
+        userPw.value = "";
+      } else if (userName.value.trim() === "") {
+        alert("이름을 입력해주세요");
+        userName.focus();
+        userName.value = "";
+        s;
+      } else if (postCode.value.trim() === "") {
+        alert("우편번호를 입력해주세요");
+        postCode.focus();
+        postCode.value = "";
+      } else if (userEmail.value.trim() === "") {
+        alert("이메일을 입력해주세요");
+        userEmail.focus();
+        userEmail.value = "";
+      } else if (agree.checked === false) {
+        alert("회원가입을 위한 동의를 해주세요");
+        agree.focus();
+      } else {
+        joinForm.submit();
+      }
+      console.log(3 == "3");
+      // console.log(userId.value);
+      // joinForm.submit();
+    });
+  </script>
+</html>

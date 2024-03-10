@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; //width에 padding값과 border을 포함하는 값이다.
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Noto Sans KR";
+  min-height: 2000px;
+  color: #111;
+  font-size: 16px;
+}
+button {
+  background: none;
+  border: none;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

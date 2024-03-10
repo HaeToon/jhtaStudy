@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 2000px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+header .gnb {
+  display: flex;
+}
+header .gnb li:hover .depth002 {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+header .depth001 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+header .depth002 {
+  opacity: 0;
+  text-align: center;
+  background-color: #f00;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+}
+header .depth002 li a {
+  color: #fff;
+  font-weight: 600;
+}
+header .depth002 li a:hover {
+  text-decoration: underline;
+}

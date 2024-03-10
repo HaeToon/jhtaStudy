@@ -1,0 +1,88 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+  &.scroll {
+    height: 60px;
+    //box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    .gnb {
+      .depth01 {
+        height: 80px;
+      }
+    }
+  }
+  //css는 형제선택자 , 자식선택자는 있지만 부모선택자는 없음
+  //over =
+  &.over {
+    height: 300px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  // align-items: start;
+  // &:hover {
+  //   //  height: 300px;
+  //   transition: height 1s ease;
+  // }
+  .gnb {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    li {
+      &:hover {
+        .depth02 {
+          pointer-events: auto;
+          opacity: 1;
+          //display: block;
+        }
+      }
+    }
+    .depth01 {
+      display: flex;
+      height: 100px;
+      justify-content: center; /* 행 센터 */
+      align-items: center; /*열 센터 */
+      margin-left: 35px;
+      margin-right: 35px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #111;
+      transition: all 0.5s ease;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    .depth02 {
+      opacity: 0;
+      text-align: center;
+      background-color: $main-color;
+      pointer-events: none;
+      //backdrop-filter: blur(10px);
+      font-size: 16px;
+      // padding-top:20px;
+      // padding-bottom: 20px;
+      // padding-left: 20px;
+      // padding-right: 20px;
+      padding: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      transition: all 0.5s ease;
+      li {
+        a {
+          color: #ffff;
+          &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+}

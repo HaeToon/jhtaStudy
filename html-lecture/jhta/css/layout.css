@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 2000px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100px;
+}
+header.over {
+  height: 300px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+header .gnb {
+  display: flex;
+  text-align: center;
+}
+header .gnb .depth001 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333;
+}
+header .gnb .depth001:hover {
+  color: #f99d1a;
+  transition: all 0.5s ease;
+}
+header .gnb .depth002 a {
+  color: #555;
+  font-weight: 600;
+}
+header h1 {
+  position: absolute;
+  left: 0;
+}

@@ -1,0 +1,36 @@
+//메서드 만드는곳 함수
+//중복해서 많이 쓰는 것들을 함수로 만들어서 @include 함수명 으로 사용가능
+@mixin longShadow($end, $shadowColor) {
+  $shadow: "";
+  @for $i from 1 through $end - 1 {
+    $shadow: $shadow + $i + "px " + $i + "px 0 " + $shadowColor + ",";
+  } // 변수 i를 1~$end까지 증가시킨후 반복문 빠져나옴
+  $shadow: $shadow + $end + "px " + $end + "px 0 " + $shadowColor + ";";
+  $shadow: unquote($shadow);
+  text-shadow: $shadow;
+} // longShadow 빠져나옴
+@mixin flex($position: center) {
+  @if $position == start {
+    justify-content: start;
+  } @else if $position == end {
+    justify-content: end;
+  } @else {
+    justify-content: center;
+  }
+  display: flex;
+  align-items: center;
+}
+@mixin ellipse() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin multiEllipsis($line: 2, $lineHeight: 1.5) {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: $lineHeight;
+  height: $line * $lineHeight * 1em; //px은 절대단위 ex(50px = 50x2x1.5=300
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+} // 긴 내용을 line줄로 줄이는것 [line clamp:2]
