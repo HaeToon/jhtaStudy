@@ -319,6 +319,13 @@ header .gnb .depth02 li a:hover {
   height: 40px;
   padding: 0 20px;
 }
+.join .form-table td textarea {
+  resize: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: inherit;
+}
 .join .form-table td .input-box {
   margin-top: 10px;
 }

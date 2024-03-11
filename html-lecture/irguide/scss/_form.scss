@@ -44,6 +44,13 @@
         height: 40px;
         padding: 0 20px;
       }
+      textarea {
+        resize: none;
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 20px;
+        font-family: inherit;
+      }
       .input-box {
         margin-top: 10px;
       }
