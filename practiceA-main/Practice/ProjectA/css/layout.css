@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 2000px;
+}
+
+button {
+  border: none;
+}
+
+.main-visual {
+  overflow: hidden;
+}
+.main-visual .main-visual-quick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: relative;
+}
+.main-visual .main-visual-quick .quick-depth01 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  padding: 25px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 104px;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+header.headerSpread {
+  height: 300px;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.5s ease;
+}
+header .gnb {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+header .gnb li .depth01:hover {
+  color: #f99d1a;
+}
+header .depth01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 104px;
+  margin-left: 26px;
+  margin-right: 26px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.5s ease;
+}
+header .depth02 li a {
+  color: #666;
+}
+header .depth02 li a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+header .logo {
+  position: absolute;
+  top: 23px;
+  left: 120px;
+}
+
+.snb {
+  z-index: 2;
+  position: fixed;
+  top: 20%;
+  right: 20px;
+  width: 140px;
+  background-color: #f3f3f3;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.snb li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+.snb li:last-child {
+  border-bottom: none;
+}
+.snb .side-depth01 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+.snb .side-depth01:hover {
+  color: #f99d1a;
+  transition: all 0.5s ease;
+}
+.snb .side-depth02 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+.snb .side-depth02:hover {
+  color: #999;
+  transition: all 0.5s ease;
+}
+
+.btn-top {
+  z-index: 3;
+  position: fixed;
+  right: 68px;
+  top: 76%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #707070;
+}
+.btn-top:hover {
+  background-color: #f99d1a;
+}

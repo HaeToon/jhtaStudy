@@ -1,0 +1,121 @@
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 104px;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.9);
+  &.headerSpread {
+    height: 300px;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.5s ease;
+  }
+  .gnb {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    li {
+      .depth01 {
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .depth01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 104px;
+    margin-left: 26px;
+    margin-right: 26px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.5s ease;
+  }
+  .depth02 {
+    li {
+      a {
+        color: #666;
+        &:hover {
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 23px;
+    left: 120px;
+  }
+}
+.snb {
+  z-index: 2;
+  position: fixed;
+  top: 20%;
+  right: 20px;
+  width: 140px;
+  background-color: #f3f3f3;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .side-depth01 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    &:hover {
+      color: $main-color;
+      transition: all 0.5s ease;
+    }
+  }
+  .side-depth02 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    &:hover {
+      color: #999;
+      transition: all 0.5s ease;
+    }
+  }
+}
+.btn-top {
+  z-index: 3;
+  position: fixed;
+  right: 68px;
+  top: 76%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #707070;
+  &:hover {
+    background-color: $main-color;
+  }
+}
