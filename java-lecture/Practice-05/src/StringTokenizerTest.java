@@ -5,7 +5,7 @@ public class StringTokenizerTest {
         int count = 0;
         while(true){
             System.out.println(">>");
-            String text=scanner.next();
+            String text=scanner.nextLine();
             if(text.equals("그만")) {
                 System.out.println("종료합니다.");
                 break;
